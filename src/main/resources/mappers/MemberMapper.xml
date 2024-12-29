@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.howairdemo.mapper.MemberMapper">
+	<sql id="search">
+		<where>
+			<if test="word!=null and field =='id'">
+				id like CONCAT('%',#{word},'%')
+			</if>
+			<if test="word!=null and field =='name'">
+				name like CONCAT('%',#{word},'%')
+			</if>
+			<if test="word!=null and field =='regdate'">
+				regdate like CONCAT('%',#{word},'%')
+			</if>
+		</where>
+	</sql>
+	<select id="findAll"
+		resultType="MemberVO">
+		select * from howair_member
+		<include refid="search" />
+		limit #{pageStart},#{pageSize}
+	</select>
+
+	<select id="memberCount" resultType="int">
+		select count(*) from howair_member
+		<include refid="search" />
+
+	</select>
+
+	<select id="getList"
+		resultType="MemberVO">
+		select * from howair_member
+	</select>
+	<select id="read" resultType="MemberVO">
+		select * from howair_member where
+		id=#{id}
+	</select>
+	<!-- 회원가입 -->
+	<insert id="join">
+		insert into howair_member(id,name,pass)
+		values(#{id},#{name},#{pass})
+	</insert>
+	<!-- 아디중복체크 -->
+	<select id="idCheck" resultType="int">
+		select count(*) from howair_member
+		where id=#{id}
+	</select>
+	<!-- 로그인처리 -->
+	<select id="loginCheck"
+		resultType="MemberVO">
+		select * from howair_member where id=#{id}
+	</select>
+
+	<update id="modify">
+		update howair_member
+		set name=#{name},
+		pass=#{pass},
+		regdate=now()
+		where id=#{id}
+	</update>
+
+	<delete id="delete">
+		delete from howair_member where id=#{id}
+	</delete>
+
+</mapper>

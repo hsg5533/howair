@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.howairdemo.mapper.DataMapper">
+
+	<select id="kangseoList" resultType="PredictVO">
+		select * from pred_bs_01kangseo
+	</select>
+	<select id="geumjungList" resultType="PredictVO">
+		select * from pred_bs_02geumjung
+	</select>
+	<select id="gijangList" resultType="PredictVO">
+		select * from pred_bs_03gijang
+	</select>
+	<select id="namList" resultType="PredictVO">
+		select * from pred_bs_04nam
+	</select>
+	<select id="dongList" resultType="PredictVO">
+		select * from pred_bs_05dong
+	</select>
+	<select id="dongraeList" resultType="PredictVO">
+		select * from pred_bs_06dongrae
+	</select>
+	<select id="busanjinList" resultType="PredictVO">
+		select * from pred_bs_07busanjin
+	</select>
+	<select id="bukList" resultType="PredictVO">
+		select * from pred_bs_08buk
+	</select>
+	<select id="sasangList" resultType="PredictVO">
+		select * from pred_bs_09sasang
+	</select>
+	<select id="sahaList" resultType="PredictVO">
+		select * from pred_bs_10saha
+	</select>
+	<select id="seoList" resultType="PredictVO">
+		select * from pred_bs_11seo
+	</select>
+	<select id="suyeongList" resultType="PredictVO">
+		select * from pred_bs_12suyeong
+	</select>
+	<select id="yeonjeList" resultType="PredictVO">
+		select * from pred_bs_13yeonje
+	</select>
+	<select id="youngdoList" resultType="PredictVO">
+		select * from pred_bs_14yeongdo
+	</select>
+	<select id="jungList" resultType="PredictVO">
+		select * from pred_bs_15jung
+	</select>
+	<select id="haeundaeList" resultType="PredictVO">
+		select * from pred_bs_16haeundae
+	</select>
+	
+	<select id="detail2010" resultType="AvgVO">
+		select * from year2010
+	</select>
+	<select id="detail2011" resultType="AvgVO">
+		select * from year2011
+	</select>
+	<select id="detail2012" resultType="AvgVO">
+		select * from year2012
+	</select>
+	<select id="detail2013" resultType="AvgVO">
+		select * from year2013
+	</select>
+	<select id="detail2014" resultType="AvgVO">
+		select * from year2014
+	</select>
+	<select id="detail2015" resultType="AvgVO">
+		select * from year2015
+	</select>
+	<select id="detail2016" resultType="AvgVO">
+		select * from year2016
+	</select>
+	<select id="detail2017" resultType="AvgVO">
+		select * from year2017
+	</select>
+	<select id="detail2018" resultType="AvgVO">
+		select * from year2018
+	</select>
+	<select id="detail2019" resultType="AvgVO">
+		select * from year2019
+	</select>
+	<select id="detail2020" resultType="AvgVO">
+		select * from year2020
+	</select>
+
+</mapper>
