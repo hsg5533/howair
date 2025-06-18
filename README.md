@@ -39,11 +39,3 @@ cd howair
 3. Push 및 Pull Request 생성
 
 > 모든 기여는 환영합니다! 이슈 등록이나 PR을 통해 자유롭게 참여해주세요.
-
-## 라이센스
-
-Apache License 2.0
-
----
-
-© 2025 howair 팀
